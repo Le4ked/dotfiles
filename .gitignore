@@ -1,0 +1,7 @@
+nvim/.config/nvim/lazy-lock.json
+
+yazi/.config/yazi/cache
+
+#Secrets / tokens
+**/*.env
+**/*secret*

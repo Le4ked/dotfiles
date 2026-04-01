@@ -1,0 +1,9 @@
+[opener]
+edit = [
+	{ run = "nvim $@", block = true, for ="unix" }
+]
+3d = [
+	{ run = "f3d $@", block = true, for="unix"}
+]
+
+[open]
