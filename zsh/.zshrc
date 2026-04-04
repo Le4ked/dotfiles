@@ -1,0 +1,30 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt extendedglob
+# vi movement with short esc-timeout
+bindkey -v
+export KEYTIMEOUT=5
+
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/alex/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# PreLineDisplay
+PS1="%n@%m %~$ "
+
+# Zellij hook
+eval "$(zellij setup --generate-auto-start zsh)"
+
+# Alias
+alias y="yazi"
+alias ls="exa -a --icons --color"
+alias lt="exa -T"
+
+# Env variables
+export EDITOR=nvim
