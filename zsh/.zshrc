@@ -21,8 +21,16 @@ PS1="%n@%m %~$ "
 # Zellij hook
 eval "$(zellij setup --generate-auto-start zsh)"
 
+# yazi shell wrapper
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
 # Alias
-alias y="yazi"
 alias ls="exa -a --icons --color"
 alias lt="exa -T"
 
