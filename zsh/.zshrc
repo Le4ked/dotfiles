@@ -36,3 +36,4 @@ alias lt="exa -T"
 
 # Env variables
 export EDITOR=nvim
+export PATH="$HOME/.local/bin:$PATH"

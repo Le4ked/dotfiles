@@ -70,4 +70,4 @@ Currently explicitly configured: `lua_ls`. `stylua` is auto-installed for Lua fo
 
 - `lua_line.lua` at the repo root is a stale/unused file — not loaded by anything.
 - `lua/plugins/avante.lua` was deleted (see git status); avante is no longer part of this config.
-- Inlay hints toggle binding in `nvim-lspconfig.lua` has a typo: `" leader>lh"` — the `<` is missing.
+- Inlay hints toggle: `<leader>lh` in `nvim-lspconfig.lua`.

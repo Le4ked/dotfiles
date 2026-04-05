@@ -5,8 +5,8 @@ set -e
 sudo pacman -S --needed stow
 DOTFILES_DIR="$HOME/dotfiles"
 
-packages=(nvim yazi zellij)
-sudo pacman -S  nvim yazi zellij zsh ghostty
+packages=(nvim yazi zellij ghostty zsh)
+sudo pacman -S --needed "${packages[@]}"
 
 for pkg in "${packages[@]}"; do
   echo "Stowing $pkg..."
