@@ -6,7 +6,9 @@ sudo pacman -S --needed stow
 DOTFILES_DIR="$HOME/dotfiles"
 
 packages=(nvim yazi zellij ghostty zsh)
+external_dependencies=(ripgrep wget luarocks cmake tree-sitter-cli nodejs npm python-pynvim)
 sudo pacman -S --needed "${packages[@]}"
+sudo pacman -S --needed "${external_dependencies[@]}"
 
 for pkg in "${packages[@]}"; do
   echo "Stowing $pkg..."
