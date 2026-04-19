@@ -10,7 +10,7 @@ cursor-style = block
 cursor-style-blink = true
 
 # Window
-background-opacity = 0.7
+background-opacity = 0.85
 background-blur =  30
 window-decoration = auto
 confirm-close-surface = false

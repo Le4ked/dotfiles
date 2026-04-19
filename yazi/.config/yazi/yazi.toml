@@ -7,3 +7,16 @@ edit = [
 ]
 
 [open]
+
+[plugin]
+prepend_previewers = [
+    { url = "*.obj", run = "mesh-preview" },
+    { url = "*.stl", run = "mesh-preview" },
+    { url = "*.ply", run = "mesh-preview" },
+    { url = "*.gltf", run = "mesh-preview" },
+    { url = "*.glb", run = "mesh-preview" },
+    { url = "*.fbx", run = "mesh-preview" },
+    { url = "*.3ds", run = "mesh-preview" },
+    { url = "*.off", run = "mesh-preview" },
+    { url = "*.dae", run = "mesh-preview" },
+]
