@@ -16,7 +16,8 @@ compinit
 # End of lines added by compinstall
 
 # PreLineDisplay
-PS1="%n@%m %~$ "
+autoload -U colors && colors
+PS1='%F{magenta}%n@%m%f %F{cyan}%~%f %(?.%F{green}$>.%F{red}$>)%f '
 
 # Zellij hook
 eval "$(zellij setup --generate-auto-start zsh)"
