@@ -33,7 +33,9 @@ function y() {
 # Alias
 alias ls="exa -a --icons --color"
 alias lt="exa -T"
+alias sysspec="{ inxi -Fxxx -c 0; echo; pacman -Q; } | wl-copy"
 
 # Env variables
 export EDITOR=nvim
 export PATH="$HOME/.local/bin:$PATH"
+export MANPAGER='nvim +Man!'
