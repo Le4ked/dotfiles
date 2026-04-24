@@ -35,6 +35,7 @@ function y() {
 alias ls="exa -a --icons --color"
 alias lt="exa -T"
 alias sysspec="{ inxi -Fxxx -c 0; echo; pacman -Q; } | wl-copy"
+alias gitlog="git log --oneline --graph --all"
 
 # Env variables
 export EDITOR=nvim
