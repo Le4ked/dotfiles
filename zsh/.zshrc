@@ -36,8 +36,11 @@ alias ls="exa -a --icons --color"
 alias lt="exa -T"
 alias sysspec="{ inxi -Fxxx -c 0; echo; pacman -Q; } | wl-copy"
 alias gitlog="git log --oneline --graph --all"
+alias rate-mirrors="rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist"
 
 # Env variables
 export EDITOR=nvim
 export PATH="$HOME/.local/bin:$PATH"
 export MANPAGER='nvim +Man!'
+export PAGER="nvim"
+export DIFFPROG="nvim -d"
