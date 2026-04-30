@@ -37,6 +37,7 @@ alias lt="exa -T"
 alias sysspec="{ inxi -Fxxx -c 0; echo; pacman -Q; } | wl-copy"
 alias gitlog="git log --oneline --graph --all"
 alias rate-mirrors="rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist"
+alias lg="lazygit"
 
 # Env variables
 export EDITOR="nvim"
