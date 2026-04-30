@@ -10,10 +10,11 @@ external_dependencies=(inxi ripgrep wget luarocks cmake tree-sitter-cli nodejs n
 sudo pacman -S --needed "${packages[@]}"
 sudo pacman -S --needed "${external_dependencies[@]}"
 
+echo "Commence stowing:"
 for pkg in "${packages[@]}"; do
   echo "Stowing $pkg..."
   stow -d "$DOTFILES_DIR" -t "$HOME" "$pkg"
 done
 
-echo "Remember to use lazygit"
 echo "Done!"
+echo "Remember to use lazygit"
