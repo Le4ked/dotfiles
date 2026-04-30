@@ -39,7 +39,7 @@ alias gitlog="git log --oneline --graph --all"
 alias rate-mirrors="rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist"
 
 # Env variables
-export EDITOR=nvim
+export EDITOR="nvim"
 export PATH="$HOME/.local/bin:$PATH"
 export MANPAGER='nvim +Man!'
 export PAGER="nvim"
