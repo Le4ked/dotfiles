@@ -1,6 +1,11 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	tag = "0.1.8",
-	-- or                              , branch = '0.1.x',
-	dependencies = { "nvim-lua/plenary.nvim", "BurntSushi/ripgrep" },
+	version = "0.2.2",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"BurntSushi/ripgrep",
+		"sharkdp/fd",
+		-- optional but recommended
+		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+	},
 }
