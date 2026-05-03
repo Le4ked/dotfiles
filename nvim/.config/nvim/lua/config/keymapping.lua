@@ -2,7 +2,9 @@
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader><leader>", builtin.current_buffer_fuzzy_find, { desc = "Telescope current buffer" })
 vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>fg", function()
+	builtin.live_grep({ hidden = true, no_ignore = false })
+end, { desc = "Telescope live grep" })
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 vim.keymap.set("n", "<leader>fc", builtin.commands, { desc = "Telescope commands" })
@@ -49,7 +51,7 @@ vim.keymap.set("n", "<A-t>", "<cmd>tabnew<cr>", { desc = "New Tab" })
 vim.keymap.set("n", "<A-l>", "<C-]>", { desc = "Follow Link" })
 
 -- CodeCompanion
-vim.keymap.set("n", "<leader>ac", "<cmd>CodeCompanionChat Toggle<cr>", { desc = "Claude Chat" })
+vim.keymap.set("n", "<leader>ac", "<cmd>CodeCompanionChat Toggle<cr>", { desc = "Claude Chat Toggle" })
 vim.keymap.set("n", "<leader>aa", "<cmd>Telescope codecompanion<cr>", { desc = "Open Action palette" })
 vim.keymap.set("v", "<leader>aa", "<cmd>Telescope codecompanion<cr>", { desc = "Open Action palette" })
 vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
@@ -60,4 +62,4 @@ vim.cmd([[cab cc CodeCompanion]])
 vim.cmd("packadd nvim.undotree")
 vim.keymap.set("n", "<leader>u", require("undotree").open)
 
--- NOTE:  Noch mehr Keybinds in der nvim-lspconfig.lua unter /plugins
+-- NOTE:  Noch mehr Keybinds in der nvim-lspconfig.lua unter /plugins (insb. blink.cmp keybinds)

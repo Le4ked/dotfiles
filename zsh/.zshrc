@@ -15,9 +15,21 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# PreLineDisplay
+# PreLineDisplay  (3 powerline segments, light→medium→dark turquoise)
 autoload -U colors && colors
-PS1='%F{magenta}%n@%m%f %F{cyan}%~%f %(?.%F{green}$>.%F{red}$>)%f '
+setopt PROMPT_SUBST
+
+precmd() {
+  local branch
+  branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+  if [[ -n $branch ]]; then
+    PS1='%K{116}%F{black} %n@%m %F{116}%K{73}%F{black} %2~ %F{73}%K{30}%F{white}  '"$branch"' %F{30}%k%f
+%(?.%F{green}$>.%F{red}$>)%f '
+  else
+    PS1='%K{116}%F{black} %n@%m %F{116}%K{73}%F{black} %2~ %F{73}%k%f
+%(?.%F{green}$>.%F{red}$>)%f '
+  fi
+}
 
 # Zellij hook
 eval "$(zellij setup --generate-auto-start zsh)"
