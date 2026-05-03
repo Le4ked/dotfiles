@@ -15,6 +15,15 @@ return {
 			cmd = {
 				adapter = "anthropic",
 			},
+			cli = {
+				agent = "claude_code",
+				agents = {
+					cmd = "claude",
+					args = {},
+					description = "Claude Code CLI",
+					provider = "terminal",
+				},
+			},
 			background = {
 				adapter = "anthropic",
 			},

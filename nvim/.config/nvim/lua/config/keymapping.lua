@@ -36,9 +36,28 @@ vim.keymap.set("n", "<Esc><Esc>", "<cmd>noh<cr>", { noremap = true }, { desc = "
 -- Tab Alt Commands
 vim.keymap.set("n", "<A-.>", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 vim.keymap.set("n", "<A-,>", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
+vim.keymap.set("n", "<A-t>", "<cmd>tabnew<cr>", { desc = "New Tab" })
+vim.keymap.set("n", "<A-w>", "<cmd>tabclose<cr>", { desc = "Close Tab" })
+vim.keymap.set("n", "<A-1>", "1gt", { desc = "Go to Tab 1" })
+vim.keymap.set("n", "<A-2>", "2gt", { desc = "Go to Tab 2" })
+vim.keymap.set("n", "<A-3>", "3gt", { desc = "Go to Tab 3" })
+vim.keymap.set("n", "<A-4>", "4gt", { desc = "Go to Tab 4" })
+vim.keymap.set("n", "<A-5>", "5gt", { desc = "Go to Tab 5" })
 vim.keymap.set("n", "<A-w>", "<cmd>tabclose<cr>", { desc = "Close Tab" })
 vim.keymap.set("n", "<A-t>", "<cmd>tabnew<cr>", { desc = "New Tab" })
 
 vim.keymap.set("n", "<A-l>", "<C-]>", { desc = "Follow Link" })
+
+-- CodeCompanion
+vim.keymap.set("n", "<leader>ac", "<cmd>CodeCompanionChat Toggle<cr>", { desc = "Claude Chat" })
+vim.keymap.set("n", "<leader>aa", "<cmd>Telescope codecompanion<cr>", { desc = "Open Action palette" })
+vim.keymap.set("v", "<leader>aa", "<cmd>Telescope codecompanion<cr>", { desc = "Open Action palette" })
+vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
+-- Expand 'cc' into 'CodeCompanion' in the command line
+vim.cmd([[cab cc CodeCompanion]])
+
+-- Undo Tree (built-in feature)
+vim.cmd("packadd nvim.undotree")
+vim.keymap.set("n", "<leader>u", require("undotree").open)
 
 -- NOTE:  Noch mehr Keybinds in der nvim-lspconfig.lua unter /plugins
