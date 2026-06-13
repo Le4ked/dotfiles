@@ -50,6 +50,8 @@ alias sysspec="{ inxi -Fxxx -c 0; echo; pacman -Q; } | wl-copy"
 alias gitlog="git log --oneline --graph --all"
 alias rate-mirrors="rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist"
 alias lg="lazygit"
+alias comfyui="cd ~/Projekte/ComfyUI/ && uv run main.py"
+alias llama-swap="llama-swap --config .config/llama-swap/config.yaml --listen localhost:8080"
 
 # Env variables
 export EDITOR="nvim"
@@ -57,3 +59,4 @@ export PATH="$HOME/.local/bin:$PATH"
 export MANPAGER='nvim +Man!'
 export PAGER="nvim"
 export DIFFPROG="nvim -d"
+export PATH="/usr/bin/core_perl:$HOME/.linuxbrew/Homebrew/bin:$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
