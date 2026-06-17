@@ -59,4 +59,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export MANPAGER='nvim +Man!'
 export PAGER="nvim"
 export DIFFPROG="nvim -d"
+export NVIM_APPNAME=nvimLazyvim nvim
 export PATH="/usr/bin/core_perl:$HOME/.linuxbrew/Homebrew/bin:$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
+export OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true
