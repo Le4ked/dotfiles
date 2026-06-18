@@ -59,6 +59,17 @@ export PATH="$HOME/.local/bin:$PATH"
 export MANPAGER='nvim +Man!'
 export PAGER="nvim"
 export DIFFPROG="nvim -d"
-export NVIM_APPNAME=nvimLazyvim nvim
-export PATH="/usr/bin/core_perl:$HOME/.linuxbrew/Homebrew/bin:$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
+export NVIM_APPNAME="nvimLazy"
+
+# opencode
+export PATH=/home/alex/.opencode/bin:$PATH
+
+# bun completions
+[ -s "/home/alex/.bun/_bun" ] && source "/home/alex/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# oh-my-opencode-slim: enable background subagents
 export OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true
