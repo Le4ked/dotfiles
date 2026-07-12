@@ -53,6 +53,11 @@ alias lg="lazygit"
 alias comfyui="cd ~/Projekte/ComfyUI/ && uv run main.py"
 alias llama-swap="llama-swap --config .config/llama-swap/config.yaml --listen localhost:8080"
 
+# Resolve (DaVinci Resolve) — only on this PC (arch-g14)
+if [[ "$HOST" == "arch-g14" ]]; then
+  alias resolve="DRI_PRIME=1 exec /opt/resolve/bin/resolve"
+fi
+
 # Env variables
 export EDITOR="nvim"
 export PATH="$HOME/.local/bin:$PATH"
