@@ -17,5 +17,6 @@ confirm-close-surface = false
 
 # Integration
 shell-integration = zsh
+macos-option-as-alt = left
 
 # keybinds

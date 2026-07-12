@@ -28,21 +28,10 @@ stow -D -d ~/dotfiles -t ~ <package>
 |---|---|
 | `ghostty` | `~/.config/ghostty/config.ghostty` |
 | `nvim` | `~/.config/nvim/` |
+| `opencode` | `~/.config/opencode/` |
 | `yazi` | `~/.config/yazi/` |
 | `zellij` | `~/.config/zellij/config.kdl` |
 | `zsh` | `~/.zshrc` |
-
-## Known issue in stow.sh
-
-`ghostty` and `zsh` are missing from the `packages` array — they get installed by pacman but never stowed:
-
-```bash
-# current (broken)
-packages=(nvim yazi zellij)
-
-# should be
-packages=(nvim yazi zellij ghostty zsh)
-```
 
 ## Neovim config
 
