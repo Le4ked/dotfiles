@@ -1,5 +1,6 @@
 # Theme
-theme = Catppuccin Mocha
+theme = dark:Catppuccin Frappe,light:Catppuccin Latte
+
 
 # Font
 font-family = "JetBrainsMono Nerd Font"
@@ -10,8 +11,7 @@ cursor-style = block
 cursor-style-blink = true
 
 # Window
-background-opacity = 0.70
-background-blur =  30
+background-opacity = 0.97
 window-decoration = auto
 confirm-close-surface = false
 
